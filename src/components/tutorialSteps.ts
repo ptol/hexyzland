@@ -83,7 +83,8 @@ the function can also return false or true
       'x%2==0 && y%2==0 ?sin(t):-cos(t); sin(t-hypot(2*size+x,y,z)); x%2 ? sin(t-x-y*2) : -sin(t-x-y*2);sin(t-hypot(x,y,z) + r)',
   },
   {
-    description: 'even more examples',
+    description: `source code <a class="underline" href="https://github.com/ptol/hexyzland" target="_blank">https://github.com/ptol/hexyzland</a>
+    `,
     examples:
       'sin(t)*size-r;1/(sin(2*t)*size-r);sin(t+r%2);1/(sin(2*t+a/60)*9-x);sin(t*2+a/60-hypot(x,y,z))',
   },
