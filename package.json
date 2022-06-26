@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "prettier": "prettier --write **/*.{tsx,ts,js}",
-    "build": "rimraf site/* && webpack --mode production"
+    "build": "rimraf docs/* && webpack --mode production"
   },
   "repository": {
     "type": "git",
