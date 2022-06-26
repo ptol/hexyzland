@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root,
+html,
+body {
+  font-family: 'JetBrainsMono', monospace;
+  height: 100%;
+}
+
+.tp-lblv_v {
+  width: 2rem !important;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../web/JetBrainsMono-Regular.woff2') format('woff2');
+}

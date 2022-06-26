@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es5",
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"allowJs": true,
+		"jsx": "react",
+		"esModuleInterop": true,
+		"lib": ["es2015", "dom"],
+		"baseUrl": "./",
+		"strict": true
+	},
+	"include": ["src/**/*.ts"]
+}
