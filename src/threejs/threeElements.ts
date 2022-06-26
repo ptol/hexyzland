@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
 const devicePixelRatio = Math.min(window.devicePixelRatio ?? 1, 2)
-const width = Math.min(window.innerWidth, 640 * devicePixelRatio)
+const width = Math.min(window.innerWidth, 640) * devicePixelRatio
 const height = width * 0.85
 export function createRenderer() {
   const renderer = new THREE.WebGLRenderer({ antialias: true })
