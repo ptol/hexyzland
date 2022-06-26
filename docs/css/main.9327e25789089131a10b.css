@@ -704,7 +704,7 @@ body {
 
 @font-face {
   font-family: 'JetBrainsMono';
-  src: url(/1e66c47aca088de94ae7.woff2) format('woff2');
+  src: url(../1e66c47aca088de94ae7.woff2) format('woff2');
 }
 
 .hover\:text-red-500:hover {
