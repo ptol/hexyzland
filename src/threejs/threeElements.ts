@@ -38,7 +38,7 @@ export function createSceneAndLight() {
   const ambientLight = new THREE.AmbientLight(0x808080, 0.5)
   scene.add(ambientLight)
 
-  const hemisphereLight = new THREE.HemisphereLight(0xcefeff, 0xb3eaf0, 0.5)
+  const hemisphereLight = new THREE.HemisphereLight(0xcefeff, 0xb3eaf0, 0.3)
   scene.add(hemisphereLight)
   return scene
 }
