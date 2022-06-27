@@ -7,6 +7,7 @@ import {
 import { createItems, Item } from './items'
 import { createFn } from '../utils'
 import * as Tweakpane from 'tweakpane'
+import { CanvasCapture } from 'canvas-capture'
 
 export class Hexyzland {
   settings = {
@@ -92,6 +93,7 @@ export class Hexyzland {
   render(time: number) {
     this.updateAllItems(time)
     this.renderer.render(this.scene, this.camera)
+    if (CanvasCapture.isRecording()) CanvasCapture.recordFrame()
   }
   startTime = performance.now()
   start() {
@@ -113,9 +115,34 @@ export class Hexyzland {
       gui.addInput(this.settings, 'circles').on('change', () => {
         this.recreateItems()
       })
+      const recordButton = gui.addButton({ title: 'start', label: 'record' })
+      recordButton.on('click', () => {
+        recordButton.title = this.toggleRecord() ? 'stop' : 'start'
+      })
       this.gui = gui
       this.gui.hidden = true
     }
     this.gui.hidden = !this.gui.hidden
+  }
+
+  initCanvasCapture = false
+  toggleRecord() {
+    if (!this.initCanvasCapture) {
+      CanvasCapture.init(this.renderer.domElement, {
+        showRecDot: true,
+      })
+      this.initCanvasCapture = true
+    }
+    if (CanvasCapture.isRecording()) {
+      CanvasCapture.stopRecord()
+      return false
+    } else {
+      CanvasCapture.beginVideoRecord({
+        format: CanvasCapture.browserSupportsMP4() ? 'mp4' : 'webm',
+        fps: 30,
+        name: 'hexyzland',
+      })
+      return true
+    }
   }
 }

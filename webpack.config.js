@@ -13,7 +13,7 @@ module.exports = {
     publicPath: '/',
   },
   optimization: {
-    splitChunks: { name: 'vendor', chunks: 'all' }
+    splitChunks: { name: 'vendor', chunks: 'all' },
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
