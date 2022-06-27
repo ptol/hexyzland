@@ -15,7 +15,7 @@ export function Canvas() {
     >
       <div
         id="settings"
-        className="absolute top-4 right-0 w-28"
+        className="absolute top-4 right-0 w-32"
         onClick={(e) => e.stopPropagation()}
       ></div>
     </div>

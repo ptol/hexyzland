@@ -76,8 +76,7 @@ the function can also return false or true
       'x/size; y/size; z/size;x%2 == 0 && y%2 == 0;sin(t-x);sin(t-x/size);sin(t-x-y*2);sin(t-hypot(x,y,z)/10)',
   },
   {
-    description: `more examples
-    you can double click the hexagon to show some visual tweaks 
+    description: `you can double click the hexagon to show some visual tweaks and record a video
     `,
     examples:
       'x%2==0 && y%2==0 ?sin(t):-cos(t); sin(t-hypot(2*size+x,y,z)); x%2 ? sin(t-x-y*2) : -sin(t-x-y*2);sin(t-hypot(x,y,z) + r)',

@@ -11,6 +11,9 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
     filename: 'js/[name].[contenthash].js',
   },
+  optimization: {
+    splitChunks: { name: 'vendor', chunks: 'all' },
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
