@@ -13,8 +13,6 @@ export function createRenderer() {
   domElement.style.objectFit = 'contain'
 
   renderer.setClearColor(0, 1)
-  renderer.shadowMap.enabled = true
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
   return renderer
 }
@@ -29,19 +27,18 @@ export function createSceneAndLight() {
   const scene = new THREE.Scene()
 
   const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5)
-  directionalLight.position.set(-2, 2, 2)
-  directionalLight.castShadow = true
+  directionalLight.position.set(2.1, -0.55, 2)
+
   scene.add(directionalLight)
 
   const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.5)
-  directionalLight2.position.set(1, 1, 2)
-  directionalLight2.castShadow = true
+  directionalLight2.position.set(0.2, 1.15, 2.55)
   scene.add(directionalLight2)
 
   const ambientLight = new THREE.AmbientLight(0x808080, 0.5)
   scene.add(ambientLight)
 
-  const light = new THREE.HemisphereLight(0xcefeff, 0xb3eaf0, 0.5)
-  scene.add(light)
+  const hemisphereLight = new THREE.HemisphereLight(0xcefeff, 0xb3eaf0, 0.5)
+  scene.add(hemisphereLight)
   return scene
 }

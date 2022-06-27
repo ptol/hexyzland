@@ -16,7 +16,7 @@ const blackMaterial = new THREE.MeshStandardMaterial({
   metalness: 0.3,
   roughness: 0.2,
 })
-function createGeo(circle: boolean) {
+function createGeometry(circle: boolean) {
   return circle ? createHexagon(0.5, 0.2, 36) : createHexagon(0.75, 0.2, 6)
 }
 
@@ -49,7 +49,7 @@ export interface Item {
 }
 
 export function createItems(circle: boolean) {
-  const geo = createGeo(circle)
+  const geo = createGeometry(circle)
   const items = grid.map((hex, i) => {
     const r = hex.distance({ q: 0, r: 0, s: 0 })
     const { x, y } = hex.toPoint()
