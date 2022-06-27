@@ -56,10 +56,10 @@ export class Hexyzland {
   }
 
   updateItem(item: Item, value: number) {
-    let newY = Math.PI / 2 + (value * Math.PI) / 2
+    let newY = -Math.PI / 2 + (value * Math.PI) / 2
     if (item.value !== undefined) {
       if (value < item.value) {
-        newY = Math.PI / 2 + ((2 - value) * Math.PI) / 2
+        newY = -Math.PI / 2 + ((2 - value) * Math.PI) / 2
       }
     }
     if (value > 4) {
