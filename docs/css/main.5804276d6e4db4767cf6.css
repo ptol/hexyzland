@@ -562,8 +562,8 @@ video {
 .min-h-\[5rem\] {
   min-height: 5rem;
 }
-.w-28 {
-  width: 7rem;
+.w-32 {
+  width: 8rem;
 }
 .w-full {
   width: 100%;
@@ -699,7 +699,7 @@ body {
 }
 
 .tp-lblv_v {
-  width: 2rem !important;
+  width: 2.5rem !important;
 }
 
 @font-face {
