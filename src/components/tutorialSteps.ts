@@ -89,7 +89,7 @@ the function can also return false or true
   },
   {
     description: `what you type is saved in [the url] 
-    share your creations
+    <a class="underline" href='https://twitter.com/ptolochko/status/1541814357809569792'>share your creations</a>
     [Have fun]`,
     examples: 'r==5 && (200<a && a<340) || (r==4 && x==3)',
   },
