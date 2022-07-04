@@ -33,7 +33,7 @@ export function Editor() {
       </div>
       <TwInput
         spellCheck="false"
-        className={state.error && 'border border-red-600'}
+        className={'border ' + (state.error ? 'border-red-600' : 'border-transparent')}
         ref={ref}
         value={state.fnText}
         onChange={(e: any) => updateFnText(e.target.value, -1)}
